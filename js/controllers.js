@@ -10,10 +10,37 @@ blogApp.controller('HomeController',function($scope, $http) {
 			$scope.username = posts.username
 			$scope.createdAt = posts.created_at
 
-			console.log('this is a post', $scope.post);
+			/*console.log('this is a post', $scope.post);
 			console.log('this is that user', $scope.username);
-			console.log('this was the time\n', $scope.createdAt);
+			console.log('this was the time\n', $scope.createdAt);*/
 
 		})
-	})
+	});
+	$scope.do_post = function(){
+		$scope.post_data = document.getElementById('post').value;
+		$scope.username_data = document.getElementById('user').value;
+		
+		//for ajax request
+		/*var fd = new FormData()
+		fd.append('username',username_data)
+		fd.append('post',post_data)
+	}*/
+
+		/*var request = http({
+				method: "POST"
+				url: API_URL + "posts/"
+				data: {
+					'username' : username_data
+					'post': post_data
+				}
+		});*/
+				$scope.data: {
+					username : 'anotre name',
+					post: 'this is a kinf of a post',
+				};
+		$http.post(
+			API_URL + "posts/",$scope.data).
+		success(function(data, status, headers, config){
+			console.log("chakk De phatter")
+		});
 })
