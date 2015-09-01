@@ -1,17 +1,22 @@
 <div class="homePage">
 	<h2>Hello User</h2>
 	<h3>My name is hitesh verme</h3>
-	<div class="cards" ng-repeat="p in t_posts">
+	<!-- <div class="cards" ng-repeat="p in t_posts">
 		<h4>User: {{p.username}}</h4>
 		<p>Post: {{p.post}}</p>
+	</div> -->
+	<div class="cards jumbotron" ng-repeat="p in t_posts">
+			<div class="post_time">
+				<h5>{{p.created_at}}</h5>
+			</div>
+			<div class="post_text">
+				<p>{{p.post}}</p>
+			</div>
+			<div class="post_user">
+				<a href="#"><h4>{{p.username}}</h4></a>
+			</div>
 	</div>
 	<br />
 	<br />
-	<div>
-		<form>
-			post: <input type="text" id="post">
-			name: <input type="text" id="user">
-			<button id="dopost" ng-click="do_post()">Post</button>
-		</form>
-	</div>
+
 </div>

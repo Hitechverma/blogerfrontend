@@ -1,6 +1,6 @@
 'use strict';
 
-blogApp.controller('HomeController',function($scope, $http) {
+blogApp.controller('HomeController',function($scope, $http, $state) {
 	$http.get(API_URL + "posts/").
 	success(function(data, status, headers, config){
 		$scope.t_posts = data;
@@ -42,6 +42,7 @@ blogApp.controller('HomeController',function($scope, $http) {
 			API_URL + "posts/",dataObj);
 		req.success(function(data, status, headers, config){
 			console.log(data);
+			$state.go('home')
 			// console.log("chakk De phatter");
 		});
 }
