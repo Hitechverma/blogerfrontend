@@ -34,13 +34,16 @@ blogApp.controller('HomeController',function($scope, $http) {
 					'post': post_data
 				}
 		});*/
-				$scope.data: {
-					username : 'anotre name',
-					post: 'this is a kinf of a post',
+		var dataObj = {
+					username : $scope.username_data,
+					post: $scope.post_data
 				};
-		$http.post(
-			API_URL + "posts/",$scope.data).
-		success(function(data, status, headers, config){
-			console.log("chakk De phatter")
+		var req = $http.post(
+			API_URL + "posts/",dataObj);
+		req.success(function(data, status, headers, config){
+			console.log(data);
+			// console.log("chakk De phatter");
 		});
+}
+
 })
