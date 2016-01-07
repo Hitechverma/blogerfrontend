@@ -7,22 +7,19 @@
 	height: 200px;
 	border: 1px solid black;
 	margin-left: 5px;
-	padding-left: 10px;
+	/*padding-left: 10px;*/
 	display: inline-block;
 }
 .post_user{
 	bottom: 0;
-	/*left: 0;*/
-	width: 95%;
-	text-align: right;
-	/*margin-bottom: 10px;*/
-	position: absolute;
-	/*vertical-align: bottom;*/
+	float:right;
+	
+	/*text-align: right;*/
 }
 .post_time{
 	top: 0;
-	width: 95%;
 	position: absolute;
+	width: 80%;
 	text-align: right;
 }
 .post_text{
