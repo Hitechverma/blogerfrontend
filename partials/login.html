@@ -1,6 +1,6 @@
-<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+<!-- <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script> -->
 <script>
-    function onSuccess(googleUser) {
+   /* function onSuccess(googleUser) {
       console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
       // console.log(googleUser.wc.wc);
       console.log(googleUser.Ka.access_token)
@@ -18,13 +18,15 @@
         'onsuccess': onSuccess,
         'onfailure': onFailure
       });
-    }
+    }*/
   </script>
 
-<div class="homePage">
+<div class="homePage" ng-controller="LoginCtrl">
 	<div>
-		<h3>What the Fuck</h3>
-		<div id="my-signin2"></div>
+		<!-- <h3>What the Fuck</h3> -->
+		<!-- <div id="my-signin2" ></div> -->
+    <input type="submit" ng-click="loginbutton()" />
+    <!-- <button id="Dekh_lenge" ng-click="login()">Hello GUys</button> -->
 	</div>
 </div>
 

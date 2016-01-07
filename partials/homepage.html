@@ -1,22 +1,23 @@
 <div class="homePage">
-	<h2>Hello User</h2>
-	<h3>My Name is Hitesh verma</h3>
-	<!-- <div class="cards" ng-repeat="p in t_posts">
-		<h4>User: {{p.username}}</h4>
-		<p>Post: {{p.post}}</p>
-	</div> -->
-	<div class="cards jumbotron" ng-repeat="p in t_posts">
-			<div class="post_time">
-				<h5>{{p.created_at}}</h5>
-			</div>
-			<div class="post_text">
-				<p>{{p.post}}</p>
-			</div>
-			<div class="post_user">
-				<a href="#"><h4>{{p.username}}</h4></a>
-			</div>
+	<div class="container">
+		<h2>Hello User</h2>
+		<h3>My Name is Hitesh verma</h3>
+		<!-- <div class="cards" ng-repeat="p in t_posts">
+			<h4>User: {{p.username}}</h4>
+			<p>Post: {{p.post}}</p>
+		</div> -->
+		<div class="cards col-md-4 jumbotron" ng-repeat="p in t_posts">
+				<div class="post_time">
+					<h5>{{p.created_at}}</h5>
+				</div>
+				<div class="post_text">
+					<p>{{p.post}}</p>
+				</div>
+				<div class="post_user">
+					<a href="#"><h4>{{p.username}}</h4></a>
+				</div>
+		</div>
+		<br />
+		<br />
 	</div>
-	<br />
-	<br />
-
 </div>
