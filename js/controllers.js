@@ -46,9 +46,15 @@
 				    var req = $http.post(
 					API_URL + "user/",userObj);
 					req.success(function(data, status, headers, config){
-					console.log(data);
-					// $state.go('home')
-				});
+						console.log(data);
+						// $state.go('home')
+						$cookies.put('User_id', data.id);
+						$cookies.put('UserName', data.User_name);
+						$cookies.put('User_email', data.email);
+						$cookies.put('loggedIn', true);
+						console.log($cookies)
+						$state.go('home')
+					});
 
 				})
 			})
