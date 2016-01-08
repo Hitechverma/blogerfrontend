@@ -1,4 +1,4 @@
-var blogApp = angular.module('blogApp',['ui.router']);
+var blogApp = angular.module('blogApp',['ui.router','ngCookies']);
 var API_URL = "http://127.0.0.1:8000/";
 blogApp.config(function($stateProvider, $urlRouterProvider) {
 $stateProvider

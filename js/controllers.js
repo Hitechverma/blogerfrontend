@@ -21,7 +21,7 @@
 
 	}]);
 */
-	blogApp.controller('LoginCtrl',['$scope','$http', function($scope, $http){
+	blogApp.controller('LoginCtrl',['$scope','$http','$state','$cookies', function($scope, $http, $state, $cookies){
 		$scope.loginbutton = function(){
 			console.log("Chal gya BAba");
 
@@ -47,6 +47,7 @@
 					API_URL + "user/",userObj);
 					req.success(function(data, status, headers, config){
 					console.log(data);
+					// $state.go('home')
 				});
 
 				})
@@ -58,7 +59,7 @@
 		$http.get(API_URL + "posts/").
 		success(function(data, status, headers, config){
 			$scope.t_posts = data;
-		// console.log($scope.t_posts, "hiiii buddy")
+		console.log($scope.t_posts, "hiiii buddy")
 		angular.forEach($scope.t_posts,function(posts){
 			$scope.post = posts.post
 			$scope.username = posts.username
