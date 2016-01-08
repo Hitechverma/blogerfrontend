@@ -52,7 +52,7 @@
 						$cookies.put('UserName', data.User_name);
 						$cookies.put('User_email', data.email);
 						$cookies.put('loggedIn', true);
-						console.log($cookies)
+						// console.log($cookies)
 						$state.go('home')
 					});
 
@@ -61,14 +61,22 @@
 		}
 	}])
 
-	blogApp.controller('HomeController',function($scope, $http, $state) {
+	blogApp.controller('HomeController',function($scope, $http, $state, $cookies) {
+
+		//fetch Data from cookies
+		$scope.name = $cookies.get('UserName');
+		$scope.userId = $cookies.get('User_id');
+		$scope.email = $cookies.get('User_email');
+		console.log("This is something which i want " + $scope.name)
+
+
 		$http.get(API_URL + "posts/").
 		success(function(data, status, headers, config){
 			$scope.t_posts = data;
 		console.log($scope.t_posts, "hiiii buddy")
 		angular.forEach($scope.t_posts,function(posts){
 			$scope.post = posts.post
-			$scope.username = posts.username
+			$scope.main = posts.main
 			$scope.createdAt = posts.created_at
 
 			/*console.log('this is a post', $scope.post);
@@ -79,7 +87,7 @@
 	});
 		$scope.do_post = function(){
 			$scope.post_data = document.getElementById('post').value;
-			$scope.username_data = document.getElementById('user').value;
+			$scope.username_data = $scope.userId
 
 		//for ajax request
 		/*var fd = new FormData()
@@ -97,7 +105,8 @@
 			});*/
 	var dataObj = {
 		username : $scope.username_data,
-		post: $scope.post_data
+		post: $scope.post_data,
+		main: $scope.name
 	};
 	var req = $http.post(
 		API_URL + "posts/",dataObj);
