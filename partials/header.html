@@ -15,6 +15,11 @@
           <li class="active"><a href="#iti" data-toggle="tab">Home</a> </li>
           <li><a href="#/post">Posts</a></li>
           <li><a href="#/login">Login</a></li>
+          <li class="pull-right">
+            <div ng-controller="HomeController">
+              <h4><span>LoggedIn As: </span>{{name}}</h4>
+            </div>
+          </li>
           <!-- <li><a href="#trade" data-toggle="tab">Trades</a></li>
           <li><a href="#map" data-toggle="tab">Infrastructure</a></li>
           <li><a href="#admin" data-toggle="tab">Administrative Staff</a></li>
