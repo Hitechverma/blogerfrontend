@@ -17,7 +17,10 @@
           <li><a href="#/login">Login</a></li>
           <li class="pull-right">
             <div ng-controller="HomeController">
-              <h4><span>LoggedIn As: </span>{{name}}</h4>
+              <div ng-if="loggedIn">
+                <h4><span>LoggedIn As: </span>{{name}}</h4>
+                <a href="#" class="pull-right" ng-click="logout()">Logout</a>
+              </div>
             </div>
           </li>
           <!-- <li><a href="#trade" data-toggle="tab">Trades</a></li>
