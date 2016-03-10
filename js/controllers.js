@@ -21,7 +21,7 @@
 
 	}]);
 */
-	blogApp.controller('LoginCtrl',['$scope','$http','$state','$cookies', function($scope, $http, $state, $cookies){
+	blogApp.controller('LoginCtrl',['$scope','$http','$state','$window','$cookies', function($scope, $http, $state, $window, $cookies){
 		$scope.loginbutton = function(){
 			console.log("Chal gya BAba");
 
@@ -53,6 +53,7 @@
 						$cookies.put('User_email', data.email);
 						$cookies.put('loggedIn', true);
 						// console.log($cookies)
+						$window.location.reload();
 						$state.go('home')
 					});
 
@@ -61,12 +62,13 @@
 		}
 	}])
 
-	blogApp.controller('HomeController',function($scope, $http, $state, $cookies) {
+	blogApp.controller('HomeController',function($scope, $http, $state, $cookies, $window) {
 
 		//fetch Data from cookies
 		$scope.name = $cookies.get('UserName');
 		$scope.userId = $cookies.get('User_id');
 		$scope.email = $cookies.get('User_email');
+		$scope.loggedIn = $cookies.get('loggedIn');
 		console.log("This is something which i want " + $scope.name)
 
 
@@ -116,5 +118,16 @@
 			// console.log("chakk De phatter");
 		});
 }
+
+	$scope.logout = function(){
+		// console.log($scope.loggedIn)
+		if ($scope.loggedIn == "true") {
+			$cookies.remove('UserName');
+			$cookies.remove('User_id');
+			$cookies.remove('User_email');
+			$cookies.remove('loggedIn');
+			$window.location.reload();
+		}
+	}
 });
 /*});*/
