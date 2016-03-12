@@ -53,8 +53,8 @@
 						$cookies.put('User_email', data.email);
 						$cookies.put('loggedIn', true);
 						// console.log($cookies)
-						$window.location.reload();
-						$state.go('home')
+						// $window.location.reload();
+						// $state.go('home')
 					});
 
 				})
@@ -77,9 +77,9 @@
 			$scope.t_posts = data;
 		console.log($scope.t_posts, "hiiii buddy")
 		angular.forEach($scope.t_posts,function(posts){
-			$scope.post = posts.post
+			/*$scope.post = posts.post
 			$scope.main = posts.main
-			$scope.createdAt = posts.created_at
+			$scope.createdAt = posts.created_at*/
 
 			/*console.log('this is a post', $scope.post);
 			console.log('this is that user', $scope.username);
@@ -114,7 +114,7 @@
 		API_URL + "posts/",dataObj);
 	req.success(function(data, status, headers, config){
 		console.log(data);
-		$state.go('home')
+		// $state.go('home')
 			// console.log("chakk De phatter");
 		});
 }
