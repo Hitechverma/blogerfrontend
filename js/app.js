@@ -17,5 +17,10 @@ $stateProvider
 		templateUrl: "partials/login.html",
 		controller: "HomeController",
 	})
+	.state('blog', {
+		url: "/blogs/:idx",
+		templateUrl: "partials/blogpage.html",
+		controller: "BlogCtrl",
+	})
 	$urlRouterProvider.otherwise('/');
 })
