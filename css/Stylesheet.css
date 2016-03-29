@@ -1,20 +1,22 @@
 .homePage{
 	margin-top: 5%;
 }
+
+.nav-wrapper{
+	padding-left: 20px;
+	padding-right: 20px;	
+}
 .cards{
 	position: relative;
 	width: 30%;
 	height: 200px;
 	border: 1px solid black;
 	margin-left: 5px;
-	/*padding-left: 10px;*/
 	display: inline-block;
 }
 .post_user{
 	bottom: 0;
 	float:right;
-	
-	/*text-align: right;*/
 }
 .post_time{
 	top: 0;
@@ -26,13 +28,10 @@
 	width: 95%;
 	height: 100%;
 	position: relative;
-	/*text-overflow: ellipsis;*/
 	overflow: hidden;
 
 }
 
 .loginClass{
-	/*margin: auto;*/
-	/*margin-left: 10%;*/
 	padding-top: 20px;
 }
