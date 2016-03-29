@@ -1,34 +1,27 @@
 <div class="header">
-  <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container ">
-      <div class="navbar-header col-md-5">
-        <button type="button" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand " href="#"><strong>Blogging </strong></a>
-      </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav col-md-7 ">
-          <li class="active"><a href="#iti" data-toggle="tab">Home</a> </li>
-          <li><a href="#/post">Posts</a></li>
-          <li><a href="#/login">Login</a></li>
-          <li class="pull-right">
-            <div ng-controller="HomeController">
-              <div ng-if="loggedIn">
-                <h4><span>LoggedIn As: </span>{{name}}</h4>
-                <a href="#" class="pull-right" ng-click="logout()">Logout</a>
-              </div>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">E-Brainstrom</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <form>
+            <div class="input-field">
+              <input id="search" type="search" placeholder="Search" required>
+              <label for="search"><i class="material-icons">search</i></label>
+              <i class="material-icons">close</i>
             </div>
-          </li>
-          <!-- <li><a href="#trade" data-toggle="tab">Trades</a></li>
-          <li><a href="#map" data-toggle="tab">Infrastructure</a></li>
-          <li><a href="#admin" data-toggle="tab">Administrative Staff</a></li>
-          <li><a href="#cont" data-toggle="tab">Contacts</a></li> -->
-        </ul>
-        </div>  
-      </div>
-    </nav>
-  </div>
+          </form>
+        </li>
+        <li class="active"><a href="#iti" data-toggle="tab">Home</a> </li>
+        <li><a href="#/post">Posts</a></li>
+        <li><a href="#/login">Login</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li class="active"><a href="#iti" data-toggle="tab">Home</a> </li>
+        <li><a href="#/post">Posts</a></li>
+        <li><a href="#/login">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
