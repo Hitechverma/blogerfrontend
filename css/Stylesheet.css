@@ -1,12 +1,33 @@
-.homePage{
+/*.homePage{
 	margin-top: 5%;
-}
+}*/
 
 .nav-wrapper{
 	padding-left: 20px;
 	padding-right: 20px;	
 }
-.cards{
+
+.time{
+	padding-left: 42%;
+}
+@media only screen and (min-width: 993px){
+.container{
+    width: 90%;
+    margin-top: 30px;
+}
+}
+/*This is to override truncate*/
+.truncate {
+    display: block;
+    white-space: normal; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 70px;
+}
+/*.container{
+	margin: 0;
+}*/
+/*	.cards{
 	position: relative;
 	width: 30%;
 	height: 200px;
@@ -30,7 +51,7 @@
 	position: relative;
 	overflow: hidden;
 
-}
+}*/
 
 .loginClass{
 	padding-top: 20px;
