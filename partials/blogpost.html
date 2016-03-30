@@ -1,12 +1,36 @@
-<div class="homePage">
-	<div>
-		<h1>What's up People</h1>
-	</div>
+<!-- <div class="homePage">
+	<div class="container">
 		<div>
-		<form>
-			&nbsp&nbsp Post: <input type="text" id="post">
-			<!-- &nbsp&nbsp name: <input type="text" id="user"> -->
-			<button id="dopost" ng-click="do_post()">Post</button>
-		</form>
+			<h3>Please share your blog here</h3>
+		</div>
+			<div>
+			<form>
+				Title: <input type="text" placeholder="Title for blog"></input>
+				Post: <input type="text" id="post">
+				<button id="dopost" ng-click="do_post()">Post</button>
+			</form>
+		</div>
 	</div>
+</div> -->
+<div class="homePage container">
+	<div class="row">
+	    <form class="col s12">
+	      <div class="row">
+		    <div>
+				<h4>Please share your blog here</h4>
+			</div>
+			<div class="input-field col s6">
+	          <input  id="first_name" type="text" class="validate">
+	          <label for="first_name">Title for blog</label>
+	        </div>
+	        <div class="input-field col s12">
+	          <textarea id="textarea1" class="materialize-textarea"></textarea>
+	          <label for="textarea1">Textarea</label>
+	        </div>
+	      </div>
+	      <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+		    <i class="material-icons right">send</i>
+		  </button>
+	    </form>
+  	</div>
 </div>
