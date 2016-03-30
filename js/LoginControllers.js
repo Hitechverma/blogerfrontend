@@ -48,11 +48,12 @@
 					req.success(function(data, status, headers, config){
 						console.log(data);
 						// $state.go('home')
+						console.log(data.id)
 						$cookies.put('User_id', data.id);
 						$cookies.put('UserName', data.User_name);
 						$cookies.put('User_email', data.email);
 						$cookies.put('loggedIn', true);
-						// console.log($cookies)
+						console.log($cookies)
 						// $window.location.reload();
 						// $state.go('home')
 					});
