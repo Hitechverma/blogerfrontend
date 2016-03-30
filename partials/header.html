@@ -1,4 +1,5 @@
 <div class="header navbar-fixed">
+    
   <nav>
     <div class="nav-wrapper">
       <a href="#!" class="brand-logo">E-Brainstrom</a>
@@ -13,9 +14,23 @@
             </div>
           </form>
         </li>
-        <li class="active"><a href="#iti" data-toggle="tab">Home</a> </li>
-        <li><a href="#/post">Posts</a></li>
-        <li><a href="#/login">Login</a></li>
+        <li><a href="#iti" data-toggle="tab">Home</a> </li>
+        <li class="pull-right">
+            <div ng-controller="HomeController">
+              <div ng-if="loggedIn">
+                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Username<i class="material-icons right">arrow_drop_down</i></a></li>
+                <!-- <a href="#" class="pull-right" ng-click="logout()">Logout</a> -->
+              </div>
+              <ul id="dropdown1" class="dropdown-content">
+                <li><a href="#!">one</a></li>
+                <li><a href="#!">Profile</a></li>
+                <li class="divider"></li>
+                <li><a href="#!" ng-click="logout()">Logout</a></li>
+              </ul>
+            </div>
+          </li>
+        <!-- <li><a href="#/post">Posts</a></li>
+        <li><a href="#/login">Login</a></li> -->
       </ul>
       <ul class="side-nav" id="mobile-demo">
         <li class="active"><a href="#iti" data-toggle="tab">Home</a> </li>
@@ -25,3 +40,6 @@
     </div>
   </nav>
 </div>
+<script>
+        $(".dropdown-button").dropdown();
+</script>
