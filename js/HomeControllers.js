@@ -26,6 +26,7 @@ blogApp
 		})
 	});
 		$scope.do_post = function(){
+			$scope.post_title = document.getElementById('blog_title').value
 			$scope.post_data = document.getElementById('post').value;
 			$scope.username_data = $scope.userId
 
@@ -45,6 +46,7 @@ blogApp
 			});*/
 	var dataObj = {
 		username : $scope.username_data,
+		post_title: $scope.post_title,
 		post: $scope.post_data,
 		main: $scope.name
 	};

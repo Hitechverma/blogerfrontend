@@ -48,12 +48,17 @@
 					req.success(function(data, status, headers, config){
 						console.log(data);
 						// $state.go('home')
-						console.log(data.id)
-						$cookies.put('User_id', data.id);
-						$cookies.put('UserName', data.User_name);
-						$cookies.put('User_email', data.email);
+						// console.log(data[1])
+						/*for (var i=0; i<data.length; i++)
+						    for (var name in data[i]) {
+						        console.log(data[0][name]);
+						    }*/
+						// console.log(data[0]);
+						$cookies.put('User_id', data[0].id);
+						$cookies.put('UserName', data[0].User_name);
+						$cookies.put('User_email', data[0].email);
 						$cookies.put('loggedIn', true);
-						console.log($cookies)
+						// console.log($cookies)
 						// $window.location.reload();
 						// $state.go('home')
 					});
