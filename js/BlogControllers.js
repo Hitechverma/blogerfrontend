@@ -6,6 +6,10 @@ blogApp.controller('BlogCtrl',['$scope','$http','$stateParams',function($scope,$
 		success(function(data,status,header,config){
 			$scope.blog_post = data
 			console.log(data)
+			$scope.blog_title = data.post_title
+			$scope.blog_content = data.post
+			$scope.blog_creator = data.main
+			$scope.blog_time = data.created_at
 		})
 	
 }])
