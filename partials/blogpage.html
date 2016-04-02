@@ -1,11 +1,26 @@
 <div class="homePage" ng-controller="BlogCtrl">
 	<div class="container">
-		<h1>Blogpage</h1>
-		<ul>
-			<li>{{blog_title}}</li>
-			<li>{{blog_content}}</li>
-			<li>{{blog_creator}}</li>
-			<li>{{blog_time}}</li>
-		</ul>
+		<div class="row">
+			<div class="content_block">
+				<div>
+				<h3 align="center">{{blog_title}}</h3>
+				</div>
+				<div>
+					<p align="center"> {{blog_content}}</p>
+				</div>
+				<div align="right">
+					<h4><b>{{blog_creator}}</b></h4>
+				</div>
+			</div>
+			<div class="comment_block">
+				<div>
+					<p>Add your Comment here</p>	
+				</div>
+				<div>
+					<textarea placeholder="add your comment here"></textarea>
+					<button >comment</button>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
