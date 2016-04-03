@@ -17,6 +17,8 @@ blogApp.controller('BlogCtrl',['$scope','$http','$stateParams','$cookies',functi
 			$scope.blog_content = data.post
 			$scope.blog_creator = data.main
 			$scope.blog_time = data.created_at
+			$scope.hasComment = data.has_comment
+			$scope.comments = data.comments
 		})
 	
 	$scope.do_comment = function(){

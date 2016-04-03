@@ -12,9 +12,14 @@
 					<h4><b>{{blog_creator}}</b></h4>
 				</div>
 			</div>
+			<div ng-if="hasComment">
+				<div ng-repeat="comm in comments" style="border: 1px dotted blue">
+					<p >{{comm}}</p>
+				</div>
+			</div>
 			<div class="comment_block">
 				<div>
-					<p>Add your Comment here</p>	
+					<!-- <p>Add your Comment here</p>	 -->
 				</div>
 				<div>
 					<textarea id="commentData" placeholder="add your comment here"></textarea>
