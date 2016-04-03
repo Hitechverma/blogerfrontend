@@ -1,4 +1,4 @@
-blogApp.controller('BlogCtrl',['$scope','$http','$stateParams','$cookies',function($scope,$http,stateParams,$cookies){
+blogApp.controller('BlogCtrl',['$scope','$http','$stateParams','$cookies',function($scope,$http,stateParams,$cookies,$window){
 	
 	var blog_id = stateParams.idx
 	console.log(blog_id)
@@ -33,7 +33,8 @@ blogApp.controller('BlogCtrl',['$scope','$http','$stateParams','$cookies',functi
 
 		var request = $http.post(API_URL + "comment/" + blog_id ,dataObject);
 		request.success(function(data,status,header,config){
-			console.log("this data is comming from commentz     "  + data)
+			console.log("this data is comming from commentz     "  + data);
+			$window.location.reload();
 		})
 
 	}
