@@ -1,4 +1,4 @@
-blogApp.controller('BlogCtrl',['$scope','$http','$stateParams','$cookies',function($scope,$http,stateParams,$cookies,$window){
+blogApp.controller('BlogCtrl',['$scope','$http','$stateParams','$cookies', '$state','$window',function($scope,$http,stateParams,$cookies, $state, $window){
 	
 	var blog_id = stateParams.idx
 	console.log(blog_id)
