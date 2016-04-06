@@ -54,7 +54,7 @@ blogApp
 		API_URL + "posts/",dataObj);
 	req.success(function(data, status, headers, config){
 		console.log(data);
-		// $state.go('home')
+		$state.go('home')
 			// console.log("chakk De phatter");
 		});
 }
