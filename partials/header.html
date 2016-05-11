@@ -5,7 +5,7 @@
       <a href="#!" class="brand-logo">E-Brainstrom</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li>
+        <!-- <li>
           <form>
             <div class="input-field">
               <input id="search" type="search" placeholder="Search" required>
@@ -13,14 +13,14 @@
               <i class="material-icons">close</i>
             </div>
           </form>
-        </li>
+        </li> -->
         <li><a href="#iti" data-toggle="tab">Home</a> </li>
         <!-- <li><a href="#/login">Login</a></li> -->
         <li ng-if="loggedIn">
           <li><a class="dropdown-button" href="#!" data-activates="dropdown1">{{name}}<!-- <i class="material-icons right">arrow_drop_down</i> --></a></li>
             <ul id="dropdown1" class="dropdown-content">
-              <li><a href="#!">Fucks</a></li>
-              <li><a href="#!">Profile</a></li>
+              <!-- <li><a href="#!">Fucks</a></li> -->
+              <li><a href="#/post">New Post</a></li>
               <li class="divider"></li>
               <li><a href="#!" ng-click="logout()">Logout</a></li>
             </ul>

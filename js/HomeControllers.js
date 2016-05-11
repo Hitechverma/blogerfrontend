@@ -13,6 +13,7 @@ blogApp
 		$http.get(API_URL + "posts/").
 		success(function(data, status, headers, config){
 			$scope.t_posts = data;
+			$scope.t_posts.reverse();
 		console.log($scope.t_posts, "hiiii buddy")
 		angular.forEach($scope.t_posts,function(posts){
 			/*$scope.post = posts.post

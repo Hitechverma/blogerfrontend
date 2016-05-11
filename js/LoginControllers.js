@@ -34,7 +34,7 @@
 			    //result is an json object which has data in me()
 			    result.me().done(function(data) {
 				    // do something with `data`, e.g. print data.name
-				    // console.log(data);
+				    console.log(data);
 				    $scope.name = data.name
 				    $scope.email = data.email
 				    var userObj = {

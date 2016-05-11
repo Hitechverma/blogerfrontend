@@ -13,9 +13,15 @@
 				</div>
 			</div>
 			<div ng-if="hasComment">
-				<div ng-repeat="comm in comments" style="border: 1px dotted blue">
+				<!-- <div ng-repeat="comm in comments" style="border: 1px dotted blue">
 					<p >{{comm}}</p>
-				</div>
+				</div> -->
+				<ul class="collapsible" data-collapsible="accordion" ng-repeat="comm in comments" >
+				    <li>
+				      <div class="collapsible-header"><i class="material-icons">filter_drama</i>{{comm}}</div>
+				      <!-- <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div> -->
+				    </li>
+				</ul>
 			</div>
 			<div class="comment_block">
 				<div>

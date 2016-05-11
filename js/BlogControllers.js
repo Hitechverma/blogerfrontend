@@ -34,7 +34,7 @@ blogApp.controller('BlogCtrl',['$scope','$http','$stateParams','$cookies', '$sta
 		var request = $http.post(API_URL + "comment/" + blog_id ,dataObject);
 		request.success(function(data,status,header,config){
 			console.log("this data is comming from commentz     "  + data);
-			$window.location.reload();
+			// $window.location.reload();
 		})
 
 	}
